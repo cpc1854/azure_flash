@@ -3,10 +3,13 @@ from flask import Flask, flash, redirect, render_template, request, session, abo
 app = Flask(__name__)
 
 @app.route('/')
+def hello_world():
+      return 'Hey its Python Flask application on Azure!'
+
+'''
 def index():
     return render_template(
         'indexh.html',**locals())
-##def hello_world():
-##  return 'Hey its Python Flask application on Azure!'
+'''
 if __name__ == '__main__':
   app.run()
